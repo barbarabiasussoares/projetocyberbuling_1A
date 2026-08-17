@@ -1,0 +1,2204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Projeto escolar Conectados com Respeito sobre Cyberbullying, suas causas, consequências, leis, punições e soluções.">
+
+<title>Conectados com Respeito | Cyberbullying</title>
+
+<style>
+
+/* =====================================================
+CONFIGURAÇÕES GERAIS
+===================================================== */
+
+:root {
+--azul: #2563eb;
+--azul-escuro: #0f172a;
+--azul-medio: #1e40af;
+--azul-claro: #dbeafe;
+--branco: #ffffff;
+--cinza: #f1f5f9;
+--cinza-texto: #475569;
+--texto: #172033;
+--borda: #cbd5e1;
+--fonte: 18px;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+font-size: var(--fonte);
+line-height: 1.7;
+color: var(--texto);
+background: var(--branco);
+}
+
+/* =====================================================
+ACESSIBILIDADE
+===================================================== */
+
+.skip-link {
+position: absolute;
+left: 10px;
+top: -100px;
+background: #000;
+color: #fff;
+padding: 12px 18px;
+border-radius: 6px;
+z-index: 9999;
+}
+
+.skip-link:focus {
+top: 10px;
+}
+
+:focus-visible {
+outline: 4px solid #f59e0b;
+outline-offset: 4px;
+}
+
+.acessibilidade {
+background: #020617;
+padding: 8px 5%;
+display: flex;
+justify-content: flex-end;
+gap: 8px;
+flex-wrap: wrap;
+}
+
+.acessibilidade button {
+background: transparent;
+color: white;
+border: 2px solid white;
+padding: 6px 12px;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+}
+
+.acessibilidade button:hover {
+background: white;
+color: #020617;
+}
+
+/* =====================================================
+HEADER
+===================================================== */
+
+header {
+background: var(--azul-escuro);
+color: white;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 4px 15px rgba(0,0,0,.2);
+}
+
+.container {
+width: min(1150px, 90%);
+margin: auto;
+}
+
+.header-container {
+min-height: 75px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 25px;
+}
+
+.logo {
+color: white;
+text-decoration: none;
+font-size: 1.3rem;
+line-height: 1.1;
+}
+
+.logo span {
+display: block;
+color: #60a5fa;
+font-weight: bold;
+}
+
+.logo strong {
+display: block;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+gap: 8px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+padding: 8px 10px;
+}
+
+nav a:hover {
+color: #93c5fd;
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.hero {
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#1e3a8a
+);
+color: white;
+padding: 80px 0;
+}
+
+.hero-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+gap: 60px;
+}
+
+.etiqueta {
+display: inline-block;
+border: 1px solid #93c5fd;
+padding: 6px 12px;
+border-radius: 30px;
+font-size: .8rem;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.hero h1 {
+font-size: clamp(2.5rem, 6vw, 5rem);
+line-height: 1.05;
+margin-bottom: 25px;
+}
+
+.hero h1 span {
+color: #60a5fa;
+}
+
+.hero p {
+font-size: 1.15rem;
+color: #e2e8f0;
+}
+
+.botoes {
+margin-top: 30px;
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.botao {
+display: inline-block;
+padding: 14px 24px;
+border-radius: 7px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.botao.principal {
+background: var(--azul);
+color: white;
+}
+
+.botao.secundario {
+border: 2px solid white;
+color: white;
+}
+
+.botao:hover {
+transform: translateY(-2px);
+}
+
+.hero-imagem svg {
+width: 100%;
+max-height: 430px;
+}
+
+/* =====================================================
+NÚMEROS
+===================================================== */
+
+.numeros {
+background: white;
+border-bottom: 1px solid var(--borda);
+}
+
+.numero-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+
+.numero {
+padding: 30px 10px;
+text-align: center;
+border-right: 1px solid var(--borda);
+}
+
+.numero:last-child {
+border-right: none;
+}
+
+.numero strong {
+display: block;
+font-size: 2rem;
+color: var(--azul);
+}
+
+.numero span {
+color: var(--cinza-texto);
+}
+
+/* =====================================================
+SEÇÕES
+===================================================== */
+
+.secao {
+padding: 90px 0;
+}
+
+.cinza {
+background: var(--cinza);
+}
+
+.titulo-secao {
+max-width: 750px;
+margin-bottom: 50px;
+}
+
+.titulo-secao > span {
+color: var(--azul);
+font-weight: bold;
+font-size: .85rem;
+letter-spacing: 1px;
+}
+
+.titulo-secao h2 {
+font-size: clamp(2rem, 4vw, 3.2rem);
+line-height: 1.1;
+margin: 10px 0 15px;
+color: var(--azul-escuro);
+}
+
+.titulo-secao p {
+color: var(--cinza-texto);
+}
+
+/* =====================================================
+CONCEITO
+===================================================== */
+
+.conceito-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+}
+
+.texto-grande {
+font-size: 1.45rem;
+margin-bottom: 20px;
+}
+
+.conceito-grid p {
+margin-bottom: 18px;
+}
+
+.imagem-card {
+background: var(--azul-claro);
+border-radius: 20px;
+padding: 35px;
+}
+
+.imagem-card svg {
+display: block;
+width: 100%;
+max-height: 400px;
+}
+
+/* =====================================================
+CARDS
+===================================================== */
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+gap: 22px;
+}
+
+.card {
+background: white;
+padding: 30px;
+border: 1px solid var(--borda);
+border-radius: 14px;
+box-shadow: 0 5px 20px rgba(15,23,42,.06);
+}
+
+.card h3 {
+color: var(--azul);
+margin-bottom: 12px;
+}
+
+.card p {
+color: var(--cinza-texto);
+}
+
+.icone {
+font-size: 2.5rem;
+margin-bottom: 15px;
+}
+
+/* =====================================================
+CAUSAS
+===================================================== */
+
+.causas-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.causa {
+padding: 30px;
+border: 1px solid var(--borda);
+border-radius: 12px;
+background: white;
+}
+
+.causa > span {
+color: var(--azul);
+font-weight: bold;
+}
+
+.causa h3 {
+font-size: 1.4rem;
+margin: 10px 0;
+}
+
+/* =====================================================
+SEÇÃO AZUL
+===================================================== */
+
+.azul {
+background: var(--azul-escuro);
+color: white;
+}
+
+.branco h2,
+.branco p,
+.branco span {
+color: white;
+}
+
+.card-azul {
+background: #172554;
+color: white;
+border-color: #334155;
+}
+
+.card-azul h3 {
+color: #93c5fd;
+}
+
+.card-azul p {
+color: #dbeafe;
+}
+
+/* =====================================================
+LEIS
+===================================================== */
+
+.lei-grid {
+display: grid;
+grid-template-columns: .8fr 1.2fr;
+gap: 50px;
+align-items: center;
+}
+
+.lei-card {
+padding: 40px;
+border: 1px solid var(--borda);
+border-radius: 15px;
+}
+
+.lei-numero {
+color: var(--azul);
+font-weight: bold;
+}
+
+.lei-card h3 {
+font-size: 2rem;
+margin: 12px 0 20px;
+}
+
+.lei-card p {
+margin-bottom: 20px;
+}
+
+.alerta {
+background: #fff7ed;
+border-left: 5px solid #ea580c;
+padding: 20px;
+border-radius: 5px;
+}
+
+.alerta strong {
+color: #c2410c;
+}
+
+/* =====================================================
+SOLUÇÕES
+===================================================== */
+
+.solucoes-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 25px;
+}
+
+.solucao {
+display: flex;
+gap: 20px;
+padding: 25px;
+border-radius: 12px;
+background: white;
+border: 1px solid var(--borda);
+}
+
+.solucao > strong {
+flex-shrink: 0;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: var(--azul);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.solucao h3 {
+margin-bottom: 8px;
+}
+
+/* =====================================================
+BANNER
+===================================================== */
+
+.banner-imagem {
+background: #dbeafe;
+padding: 80px 0;
+}
+
+.banner-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+gap: 50px;
+}
+
+.banner-grid > div > span {
+font-weight: bold;
+color: var(--azul);
+}
+
+.banner-grid h2 {
+font-size: 3rem;
+line-height: 1.1;
+margin: 15px 0;
+color: var(--azul-escuro);
+}
+
+.banner-grid svg {
+width: 100%;
+}
+
+/* =====================================================
+FORMULÁRIO
+===================================================== */
+
+.ajuda {
+background: #f8fafc;
+}
+
+form {
+max-width: 800px;
+margin: auto;
+background: white;
+padding: 40px;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(15,23,42,.08);
+}
+
+form h3 {
+font-size: 1.7rem;
+color: var(--azul-escuro);
+margin-bottom: 10px;
+}
+
+.observacao {
+color: var(--cinza-texto);
+margin-bottom: 25px;
+}
+
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+width: 100%;
+padding: 14px;
+margin-bottom: 22px;
+font: inherit;
+color: var(--texto);
+background: white;
+border: 2px solid #64748b;
+border-radius: 7px;
+}
+
+textarea {
+min-height: 160px;
+resize: vertical;
+}
+
+.botao-enviar {
+background: var(--azul);
+color: white;
+border: none;
+padding: 15px 25px;
+border-radius: 7px;
+font-weight: bold;
+font-size: 1rem;
+cursor: pointer;
+}
+
+.botao-enviar:hover {
+background: #1e3a8a;
+}
+
+.mensagem-form {
+margin-top: 20px;
+font-weight: bold;
+color: #166534;
+}
+
+/* =====================================================
+FRASE FINAL
+===================================================== */
+
+.frase-final {
+background: var(--azul);
+color: white;
+text-align: center;
+padding: 70px 20px;
+}
+
+.frase-final p {
+font-size: clamp(1.5rem, 4vw, 2.5rem);
+font-weight: bold;
+max-width: 900px;
+margin: auto auto 20px;
+}
+
+.frase-final strong {
+font-size: 1.3rem;
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer {
+background: #020617;
+color: white;
+padding: 55px 0 25px;
+}
+
+.footer-grid {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+gap: 40px;
+}
+
+footer h2,
+footer h3 {
+color: #93c5fd;
+margin-bottom: 12px;
+}
+
+footer p {
+color: #cbd5e1;
+}
+
+.copyright {
+border-top: 1px solid #334155;
+margin-top: 40px;
+padding-top: 20px;
+text-align: center;
+}
+
+/* =====================================================
+ALTO CONTRASTE
+===================================================== */
+
+.alto-contraste {
+background: #000 !important;
+color: white !important;
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .azul {
+background: #000 !important;
+}
+
+.alto-contraste section,
+.alto-contraste .card,
+.alto-contraste form,
+.alto-contraste .causa,
+.alto-contraste .solucao,
+.alto-contraste .lei-card {
+background: #000 !important;
+color: white !important;
+border-color: white !important;
+}
+
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste p,
+.alto-contraste span {
+color: white !important;
+}
+
+.alto-contraste input,
+.alto-contraste select,
+.alto-contraste textarea {
+background: #000;
+color: white;
+border-color: white;
+}
+
+/* =====================================================
+RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 850px) {
+
+.header-container {
+flex-direction: column;
+padding: 15px 0;
+}
+
+.hero-grid,
+.conceito-grid,
+.lei-grid,
+.banner-grid {
+grid-template-columns: 1fr;
+}
+
+.hero {
+text-align: center;
+}
+
+.botoes {
+justify-content: center;
+}
+
+.numero-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.numero:nth-child(2) {
+border-right: none;
+}
+
+.causas-grid,
+.solucoes-grid {
+grid-template-columns: 1fr;
+}
+
+.banner-grid h2 {
+font-size: 2.3rem;
+}
+
+.footer-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 500px) {
+
+nav ul {
+flex-direction: column;
+align-items: center;
+}
+
+.acessibilidade {
+justify-content: center;
+}
+
+.hero {
+padding: 60px 0;
+}
+
+.secao {
+padding: 60px 0;
+}
+
+form {
+padding: 25px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+html {
+scroll-behavior: auto;
+}
+
+* {
+animation: none !important;
+transition: none !important;
+}
+}
+
+</style>
+</head>
+
+
+<body>
+
+<a href="#conteudo" class="skip-link">
+Pular para o conteúdo principal
+</a>
+
+
+<!-- =====================================================
+ACESSIBILIDADE
+===================================================== -->
+
+<div class="acessibilidade"
+aria-label="Opções de acessibilidade">
+
+<button onclick="aumentarFonte()">
+A+ Aumentar
+</button>
+
+<button onclick="diminuirFonte()">
+A- Diminuir
+</button>
+
+<button onclick="altoContraste()">
+Alto contraste
+</button>
+
+<button onclick="resetarAcessibilidade()">
+Restaurar
+</button>
+
+</div>
+
+
+<!-- =====================================================
+CABEÇALHO
+===================================================== -->
+
+<header>
+
+<div class="container header-container">
+
+<a href="#inicio" class="logo">
+
+<span>Conectados</span>
+
+<strong>com Respeito</strong>
+
+</a>
+
+
+<nav aria-label="Menu principal">
+
+<ul>
+
+<li>
+<a href="#conceito">
+Conceito
+</a>
+</li>
+
+<li>
+<a href="#causas">
+Causas
+</a>
+</li>
+
+<li>
+<a href="#leis">
+Leis
+</a>
+</li>
+
+<li>
+<a href="#solucoes">
+Soluções
+</a>
+</li>
+
+<li>
+<a href="#ajuda">
+Ajuda
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main id="conteudo">
+
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
+<section id="inicio" class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-text">
+
+<span class="etiqueta">
+PROJETO ESCOLAR
+</span>
+
+<h1>
+
+Cyberbullying:
+
+<span>
+respeito também existe na internet.
+</span>
+
+</h1>
+
+<p>
+
+Projeto educativo desenvolvido para uma
+comunidade escolar com aproximadamente
+<strong>700 alunos</strong>, do
+<strong>6º ano ao 3º ano do Ensino Médio.</strong>
+
+</p>
+
+
+<div class="botoes">
+
+<a href="#conceito"
+class="botao principal">
+
+Entender o assunto
+
+</a>
+
+
+<a href="#ajuda"
+class="botao secundario">
+
+Preciso de ajuda
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- IMAGEM 1 -->
+
+<div class="hero-imagem">
+
+<svg viewBox="0 0 600 450"
+role="img"
+aria-labelledby="tituloImagem1">
+
+<title id="tituloImagem1">
+Estudantes utilizando tecnologia
+de forma responsável
+</title>
+
+<rect width="600"
+height="450"
+rx="30"
+fill="#dbeafe"/>
+
+<circle cx="170"
+cy="170"
+r="65"
+fill="#2563eb"/>
+
+<circle cx="430"
+cy="170"
+r="65"
+fill="#1e40af"/>
+
+<rect x="100"
+y="260"
+width="140"
+height="90"
+rx="15"
+fill="#172554"/>
+
+<rect x="360"
+y="260"
+width="140"
+height="90"
+rx="15"
+fill="#172554"/>
+
+<rect x="220"
+y="70"
+width="160"
+height="100"
+rx="15"
+fill="white"
+stroke="#172554"
+stroke-width="6"/>
+
+<text x="300"
+y="115"
+text-anchor="middle"
+font-family="Arial"
+font-size="22"
+fill="#172554">
+
+RESPEITO
+
+</text>
+
+<text x="300"
+y="145"
+text-anchor="middle"
+font-family="Arial"
+font-size="16"
+fill="#2563eb">
+
+ONLINE
+
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+NÚMEROS
+===================================================== -->
+
+<section class="numeros">
+
+<div class="container numero-grid">
+
+<div class="numero">
+
+<strong>700+</strong>
+
+<span>alunos</span>
+
+</div>
+
+
+<div class="numero">
+
+<strong>6º–9º</strong>
+
+<span>Ensino Fundamental</span>
+
+</div>
+
+
+<div class="numero">
+
+<strong>1º–3º</strong>
+
+<span>Ensino Médio</span>
+
+</div>
+
+
+<div class="numero">
+
+<strong>100%</strong>
+
+<span>respeito</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+CONCEITO
+===================================================== -->
+
+<section id="conceito"
+class="secao">
+
+<div class="container">
+
+<div class="titulo-secao">
+
+<span>01 — CONHEÇA</span>
+
+<h2>
+O que é Cyberbullying?
+</h2>
+
+<p>
+Entender o problema é o primeiro passo
+para combatê-lo.
+</p>
+
+</div>
+
+
+<div class="conceito-grid">
+
+<div>
+
+<p class="texto-grande">
+
+Cyberbullying é uma forma de
+<strong>intimidação sistemática realizada
+por meios digitais.</strong>
+
+</p>
+
+<p>
+
+Ele pode acontecer por meio de redes
+sociais, aplicativos de mensagens,
+jogos on-line, comentários, grupos,
+vídeos ou outras plataformas digitais.
+
+</p>
+
+<p>
+
+Pode envolver humilhação,
+discriminação, ameaças,
+exposição indevida ou outras formas
+de violência.
+
+</p>
+
+</div>
+
+
+<div class="imagem-card">
+
+<svg viewBox="0 0 600 400"
+role="img"
+aria-labelledby="tituloImagem2">
+
+<title id="tituloImagem2">
+Pessoas conversando e praticando
+respeito no ambiente digital
+</title>
+
+<rect width="600"
+height="400"
+rx="25"
+fill="#bfdbfe"/>
+
+<circle cx="190"
+cy="150"
+r="65"
+fill="#2563eb"/>
+
+<circle cx="410"
+cy="150"
+r="65"
+fill="#1e40af"/>
+
+<rect x="125"
+y="235"
+width="130"
+height="75"
+rx="15"
+fill="#172554"/>
+
+<rect x="345"
+y="235"
+width="130"
+height="75"
+rx="15"
+fill="#172554"/>
+
+<path d="M250 100 Q300 50 350 100"
+stroke="#16a34a"
+stroke-width="12"
+fill="none"/>
+
+<text x="300"
+y="360"
+text-anchor="middle"
+font-family="Arial"
+font-size="24"
+font-weight="bold"
+fill="#172554">
+
+RESPEITO + EMPATIA
+
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+EXEMPLOS
+===================================================== -->
+
+<section class="secao cinza">
+
+<div class="container">
+
+<div class="titulo-secao">
+
+<span>02 — EXEMPLOS</span>
+
+<h2>
+Como o Cyberbullying acontece?
+</h2>
+
+</div>
+
+
+<div class="cards">
+
+<article class="card">
+
+<div class="icone"
+aria-hidden="true">
+💬
+</div>
+
+<h3>
+Mensagens ofensivas
+</h3>
+
+<p>
+Mensagens utilizadas para
+humilhar ou intimidar alguém.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<div class="icone"
+aria-hidden="true">
+📱
+</div>
+
+<h3>
+Redes sociais
+</h3>
+
+<p>
+Publicações e comentários
+usados para ridicularizar
+outra pessoa.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<div class="icone"
+aria-hidden="true">
+🎮
+</div>
+
+<h3>
+Jogos on-line
+</h3>
+
+<p>
+Ofensas, perseguições ou
+humilhações durante jogos.
+</p>
+
+</article>
+
+
+<article class="card">
+
+<div class="icone"
+aria-hidden="true">
+📸
+</div>
+
+<h3>
+Exposição
+</h3>
+
+<p>
+Compartilhamento de conteúdo
+para constranger alguém.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+CAUSAS
+===================================================== -->
+
+<section id="causas"
+class="secao">
+
+<div class="container">
+
+<div class="titulo-secao">
+
+<span>03 — CAUSAS</span>
+
+<h2>
+Por que o Cyberbullying acontece?
+</h2>
+
+<p>
+Diversos fatores podem contribuir
+para esse comportamento.
+</p>
+
+</div>
+
+
+<div class="causas-grid">
+
+<div class="causa">
+
+<span>01</span>
+
+<h3>
+Falta de empatia
+</h3>
+
+<p>
+Não perceber ou ignorar como
+uma atitude pode afetar outra pessoa.
+</p>
+
+</div>
+
+
+<div class="causa">
+
+<span>02</span>
+
+<h3>
+Pressão dos colegas
+</h3>
+
+<p>
+Participar de agressões para
+conseguir aceitação de um grupo.
+</p>
+
+</div>
+
+
+<div class="causa">
+
+<span>03</span>
+
+<h3>
+Anonimato
+</h3>
+
+<p>
+A sensação de estar protegido
+atrás de uma tela.
+</p>
+
+</div>
+
+
+<div class="causa">
+
+<span>04</span>
+
+<h3>
+Falta de educação digital
+</h3>
+
+<p>
+Desconhecimento sobre
+responsabilidade e respeito
+na internet.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+CONSEQUÊNCIAS
+===================================================== -->
+
+<section class="secao azul">
+
+<div class="container">
+
+<div class="titulo-secao branco">
+
+<span>04 — CONSEQUÊNCIAS</span>
+
+<h2>
+O problema não fica apenas na tela.
+</h2>
+
+</div>
+
+
+<div class="cards">
+
+<article class="card card-azul">
+
+<h3>
+Vida escolar
+</h3>
+
+<p>
+Pode prejudicar concentração,
+participação e convivência.
+</p>
+
+</article>
+
+
+<article class="card card-azul">
+
+<h3>
+Relações sociais
+</h3>
+
+<p>
+Pode causar conflitos,
+isolamento e perda de confiança.
+</p>
+
+</article>
+
+
+<article class="card card-azul">
+
+<h3>
+Ambiente digital
+</h3>
+
+<p>
+Conteúdos podem ser
+compartilhados rapidamente.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+LEIS
+===================================================== -->
+
+<section id="leis"
+class="secao">
+
+<div class="container">
+
+<div class="titulo-secao">
+
+<span>05 — LEGISLAÇÃO</span>
+
+<h2>
+O que diz a lei?
+</h2>
+
+<p>
+O cyberbullying também pode
+gerar consequências jurídicas.
+</p>
+
+</div>
+
+
+<div class="lei-grid">
+
+
+<div class="imagem-card">
+
+<svg viewBox="0 0 500 450"
+role="img"
+aria-labelledby="tituloImagem3">
+
+<title id="tituloImagem3">
+Documento representando a legislação
+brasileira
+</title>
+
+<rect width="500"
+height="450"
+rx="30"
+fill="#dbeafe"/>
+
+<rect x="120"
+y="60"
+width="260"
+height="330"
+rx="15"
+fill="white"
+stroke="#1e40af"
+stroke-width="8"/>
+
+<line x1="160"
+y1="130"
+x2="340"
+y2="130"
+stroke="#2563eb"
+stroke-width="12"/>
+
+<line x1="160"
+y1="180"
+x2="340"
+y2="180"
+stroke="#94a3b8"
+stroke-width="8"/>
+
+<line x1="160"
+y1="220"
+x2="340"
+y2="220"
+stroke="#94a3b8"
+stroke-width="8"/>
+
+<line x1="160"
+y1="260"
+x2="310"
+y2="260"
+stroke="#94a3b8"
+stroke-width="8"/>
+
+<circle cx="250"
+cy="325"
+r="35"
+fill="#2563eb"/>
+
+<path d="M230 325 L245 340 L275 305"
+stroke="white"
+stroke-width="10"
+fill="none"/>
+
+</svg>
+
+</div>
+
+
+<article class="lei-card">
+
+<span class="lei-numero">
+LEI Nº 14.811/2024
+</span>
+
+<h3>
+Intimidação sistemática virtual
+</h3>
+
+<p>
+
+A Lei nº 14.811/2024 acrescentou
+ao Código Penal o artigo 146-A,
+que trata da intimidação sistemática,
+conhecida como bullying.
+
+</p>
+
+<p>
+
+O parágrafo único trata especificamente
+da <strong>intimidação sistemática virtual,
+o cyberbullying</strong>, quando realizada
+por redes de computadores, redes sociais,
+aplicativos, jogos on-line ou outros meios
+digitais.
+
+</p>
+
+<div class="alerta">
+
+<strong>
+Importante:
+</strong>
+
+<p>
+
+As consequências dependem das
+circunstâncias do caso. Quando
+envolvidos são adolescentes,
+devem ser observadas as normas
+específicas aplicáveis à infância
+e à adolescência.
+
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+PUNIÇÕES
+===================================================== -->
+
+<section class="secao cinza">
+
+<div class="container">
+
+<div class="titulo-secao">
+
+<span>06 — RESPONSABILIDADE</span>
+
+<h2>
+Punições e consequências
+</h2>
+
+</div>
+
+
+<div class="cards">
+
+<article class="card">
+
+<h3>
+Medidas escolares
+</h3>
+
+<p>
+
+A escola pode adotar medidas
+educativas e disciplinares
+conforme seu regimento.
+
+</p>
+
+</article>
+
+
+<article class="card">
+
+<h3>
+Responsabilidade legal
+</h3>
+
+<p>
+
+Dependendo da situação,
+a prática pode gerar
+consequências previstas
+na legislação.
+
+</p>
+
+</article>
+
+
+<article class="card">
+
+<h3>
+Proteção de menores
+</h3>
+
+<p>
+
+Em situações envolvendo
+crianças e adolescentes,
+devem ser observadas as
+normas específicas de proteção.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+SOLUÇÕES
+===================================================== -->
+
+<section id="solucoes"
+class="secao">
+
+<div class="container">
+
+<div class="titulo-secao">
+
+<span>07 — SOLUÇÕES</span>
+
+<h2>
+Como combater?
+</h2>
+
+<p>
+Toda a comunidade escolar
+pode ajudar.
+</p>
+
+</div>
+
+
+<div class="solucoes-grid">
+
+
+<div class="solucao">
+
+<strong>01</strong>
+
+<div>
+
+<h3>
+Pense antes de publicar
+</h3>
+
+<p>
+Pergunte se sua publicação
+pode prejudicar alguém.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="solucao">
+
+<strong>02</strong>
+
+<div>
+
+<h3>
+Não compartilhe agressões
+</h3>
+
+<p>
+Não curta nem compartilhe
+conteúdos ofensivos.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="solucao">
+
+<strong>03</strong>
+
+<div>
+
+<h3>
+Procure ajuda
+</h3>
+
+<p>
+Converse com um professor,
+responsável ou adulto de confiança.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="solucao">
+
+<strong>04</strong>
+
+<div>
+
+<h3>
+Denuncie
+</h3>
+
+<p>
+Comunique a situação à
+escola ou aos responsáveis.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+BANNER COM IMAGEM
+===================================================== -->
+
+<section class="banner-imagem">
+
+<div class="container banner-grid">
+
+<div>
+
+<span>
+NOSSA MENSAGEM
+</span>
+
+<h2>
+A internet também é
+um espaço para respeitar.
+</h2>
+
+<p>
+Use a tecnologia para aprender,
+ajudar e aproximar pessoas.
+</p>
+
+</div>
+
+
+<svg viewBox="0 0 600 400"
+role="img"
+aria-labelledby="tituloImagem4">
+
+<title id="tituloImagem4">
+Estudantes colaborando através da tecnologia
+</title>
+
+<rect width="600"
+height="400"
+rx="30"
+fill="#bfdbfe"/>
+
+<circle cx="170"
+cy="150"
+r="60"
+fill="#2563eb"/>
+
+<circle cx="430"
+cy="150"
+r="60"
+fill="#1e40af"/>
+
+<rect x="230"
+y="100"
+width="140"
+height="100"
+rx="15"
+fill="white"
+stroke="#172554"
+stroke-width="6"/>
+
+<rect x="120"
+y="230"
+width="150"
+height="80"
+rx="12"
+fill="#172554"/>
+
+<rect x="330"
+y="230"
+width="150"
+height="80"
+rx="12"
+fill="#172554"/>
+
+<path d="M200 200 L400 200"
+stroke="#16a34a"
+stroke-width="12"/>
+
+<text x="300"
+y="155"
+text-anchor="middle"
+font-family="Arial"
+font-size="20"
+font-weight="bold"
+fill="#2563eb">
+
+JUNTOS
+
+</text>
+
+</svg>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+AJUDA
+===================================================== -->
+
+<section id="ajuda"
+class="secao ajuda">
+
+<div class="container">
+
+<div class="titulo-secao">
+
+<span>08 — PEDIR AJUDA</span>
+
+<h2>
+Você não está sozinho.
+</h2>
+
+<p>
+
+Se você estiver sofrendo ou
+presenciando cyberbullying,
+procure um adulto de confiança.
+
+</p>
+
+</div>
+
+
+<form id="formulario"
+onsubmit="enviarFormulario(event)">
+
+<h3>
+Comunicação à equipe escolar
+</h3>
+
+<p class="observacao">
+
+Este formulário é demonstrativo
+para o projeto escolar.
+
+</p>
+
+
+<label for="nome">
+Nome
+</label>
+
+<input
+type="text"
+id="nome"
+name="nome"
+autocomplete="name"
+placeholder="Digite seu nome">
+
+
+<label for="serie">
+Ano/Série
+</label>
+
+<select id="serie"
+name="serie">
+
+<option value="">
+Selecione
+</option>
+
+<option>6º ano</option>
+<option>7º ano</option>
+<option>8º ano</option>
+<option>9º ano</option>
+
+<option>
+1º ano do Ensino Médio
+</option>
+
+<option>
+2º ano do Ensino Médio
+</option>
+
+<option>
+3º ano do Ensino Médio
+</option>
+
+</select>
+
+
+<label for="tipo">
+Tipo de situação
+</label>
+
+<select id="tipo"
+name="tipo"
+required>
+
+<option value="">
+Selecione
+</option>
+
+<option>
+Estou sofrendo cyberbullying
+</option>
+
+<option>
+Presenciei cyberbullying
+</option>
+
+<option>
+Preciso de orientação
+</option>
+
+<option>
+Outra situação
+</option>
+
+</select>
+
+
+<label for="relato">
+Relato
+</label>
+
+<textarea
+id="relato"
+name="relato"
+required
+placeholder="Conte o que aconteceu...">
+</textarea>
+
+
+<button
+type="submit"
+class="botao-enviar">
+
+Enviar comunicação
+
+</button>
+
+
+<p id="mensagem-form"
+class="mensagem-form"
+role="status"
+aria-live="polite">
+</p>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+FRASE FINAL
+===================================================== -->
+
+<section class="frase-final">
+
+<div class="container">
+
+<p>
+
+"Antes de postar, comentar ou
+compartilhar, pense no impacto
+que suas palavras podem causar."
+
+</p>
+
+<strong>
+CONECTADOS COM RESPEITO
+</strong>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+RODAPÉ
+===================================================== -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<h2>
+Conectados com Respeito
+</h2>
+
+<p>
+Projeto escolar de conscientização
+e prevenção ao cyberbullying.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Público
+</h3>
+
+<p>
+6º ano do Ensino Fundamental
+ao 3º ano do Ensino Médio.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Comunidade
+</h3>
+
+<p>
+Aproximadamente 700 alunos.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+<p>
+Projeto escolar • Conectados com Respeito
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+JAVASCRIPT
+===================================================== -->
+
+<script>
+
+let tamanhoFonte = 18;
+
+
+/* AUMENTAR FONTE */
+
+function aumentarFonte() {
+
+if (tamanhoFonte < 26) {
+
+tamanhoFonte += 2;
+
+document.documentElement
+.style
+.setProperty(
+"--fonte",
+tamanhoFonte + "px"
+);
+}
+}
+
+
+/* DIMINUIR FONTE */
+
+function diminuirFonte() {
+
+if (tamanhoFonte > 14) {
+
+tamanhoFonte -= 2;
+
+document.documentElement
+.style
+.setProperty(
+"--fonte",
+tamanhoFonte + "px"
+);
+}
+}
+
+
+/* ALTO CONTRASTE */
+...
